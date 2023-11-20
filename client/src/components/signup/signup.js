@@ -18,7 +18,7 @@ const SignUp = () => {
     };
     const submit = async (e) => {
         e.preventDefault();
-        await axios.post("http://localhost:7001/api/user/signup", Inputs)
+        await axios.post("https://todo-api-my12.onrender.com/api/user/signup", Inputs)
         .then((res) => {
             if(res.data.message === "User Already Exits"){
                 alert((res.data.message));

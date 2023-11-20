@@ -4,10 +4,10 @@ import Todocards from "./todocards"
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Update from "./update";
-import { useDispatch } from "react-redux";
-import { authActions } from "../../store/index.js";
+// import { useDispatch } from "react-redux";
+// import { authActions } from "../../store/index.js";
 import axios from "axios";
-import update from "./update";
+// import update from "./update";
 
 let id = sessionStorage.getItem("id");
 let toUpdateArray = [];
@@ -33,7 +33,7 @@ const Todo = () => {
         } else {
             if (id) {
                 await axios
-                    .post("http://localhost:7001/api/list/addtask", { title: Inputs.title, body: Inputs.body, id: id })
+                    .post("https://todo-api-my12.onrender.com/api/list/addtask", { title: Inputs.title, body: Inputs.body, id: id })
                     .then((res) => {
                         console.log(res);
                     });
@@ -52,7 +52,7 @@ const Todo = () => {
 
     const del = async (Cardid) => {
         if (id) {
-            await axios.delete(`http://localhost:7001/api/list/deletetask/${Cardid}`, { data: { id: id } })
+            await axios.delete(`https://todo-api-my12.onrender.com/api/list/deletetask/${Cardid}`, { data: { id: id } })
                 .then((res) => {
                     toast.success("Your Task Is Deleted")
                 })
@@ -71,7 +71,7 @@ const Todo = () => {
     useEffect(() => {
         if (id) {
             const fetch = async () => {
-                await axios.get(`http://localhost:7001/api/list/gettask/${id}`)
+                await axios.get(`https://todo-api-my12.onrender.com/api/list/gettask/${id}`)
                     .then((res) => {
                         setArray(res.data.list);
                         // console.log(res.data.list)

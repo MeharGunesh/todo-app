@@ -21,7 +21,7 @@ const SignIn = () => {
     const submit = async (e) => {
         e.preventDefault();
         await axios
-            .post("http://localhost:7001/api/user/login", Inputs)
+            .post("https://todo-api-my12.onrender.com/api/user/login", Inputs)
             .then((res) => {
                 console.log(res.data.others._id);
                 sessionStorage.setItem("id", res.data.others._id);

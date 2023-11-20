@@ -17,7 +17,7 @@ const UpDate = ({ display, update }) => {
     setInputs({ ...Inputs, [name]: value })
   };
   const submit = async() => {
-    await axios.put(`http://localhost:7001/api/list/updatetask/${update._id}`,Inputs).then((res)=>{
+    await axios.put(`https://todo-api-my12.onrender.com/api/list/updatetask/${update._id}`,Inputs).then((res)=>{
       toast.success("your task Is UpDated SuccessFully")
       // console.log(res);
     })
