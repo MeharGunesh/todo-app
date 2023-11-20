@@ -1,0 +1,60 @@
+.todo{
+    /* background-image: url("https://erinplewes.com/cdn/shop/products/il_fullxfull.4215919779_7v3e.jpg?v=1663817627&width=1946");
+    background-size: cover; 
+    background-repeat: no-repeat;  */
+    background-image: url('https://www.abovethelinesecurity.com/wp-content/uploads/2016/02/about-us-background.png'); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    width: 100%;
+    min-height: 100vh;
+    max-height: auto;
+    position: relative;
+}
+.todo-inputs {
+    border: none;
+    outline: none;
+
+}
+.todo-inputs-div{
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+#textarea{
+    display: none;
+}
+.todo-card{
+    border: 1px solid black;
+}
+.todo-card-p{
+    text-align: justify;
+    text-justify: inter-word;
+}
+.card-icons{
+    font-family: 18px;
+    cursor: pointer;
+}
+.del{
+    color: red;
+}
+.card-icon-head{
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.card-icon-head:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.todo-update{
+    width: 100%;
+    height: 80vh;
+    position: absolute;
+    position: fixed;
+    top: 80px;
+    left: 0px;
+    background-color: blanchedalmond;
+    display: none;
+
+}
+.update {
+    height: 100%;
+}
