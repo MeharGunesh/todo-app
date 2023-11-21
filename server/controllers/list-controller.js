@@ -54,7 +54,8 @@ export const getTask = async (req, res) =>{
   const list = await List.find({ user: req.params.id })
   if (list.length !== 0){
     res.status(200).json({ list: list });
-  }else {
+  }
+  else {
     res.status(200).json({ message: "No Task" });
   }
 };
